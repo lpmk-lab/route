@@ -1,0 +1,24 @@
+.hero h1 {
+  font-size: 72px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 20px 0 40px;
+}
+
+.hero a {
+  background-color: #ffffff;
+  color: #06BBCC;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero a:hover {
+  background-color: #06BBCC;
+  color: #ffffff;
+}

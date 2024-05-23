@@ -1,0 +1,76 @@
+.hero {
+  background-color: #06BBCC;
+  color: #ffffff;
+  padding: 100px 20px 60px 20px;
+  text-align: center;
+  margin-top: 50px; /* to account for fixed navbar height */
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 20px 0 0;
+}
+
+.content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #06BBCC;
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+
+.content p {
+  color: #666666;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #06BBCC;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  background-color: #06BBCC;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #05a3b2;
+}

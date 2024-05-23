@@ -1,0 +1,71 @@
+.hero {
+  background-color: #06BBCC;
+  color: #ffffff;
+  padding: 100px 20px 60px 20px;
+  text-align: center;
+  margin-top: 50px; /* to account for fixed navbar height */
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 20px 0 0;
+}
+
+.content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #06BBCC;
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+
+.content p {
+  color: #666666;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.course-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: left;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.course-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  margin: 10px 0 5px;
+  color: #06BBCC;
+}
+
+.course-card p {
+  color: #666666;
+  font-size: 16px;
+}
