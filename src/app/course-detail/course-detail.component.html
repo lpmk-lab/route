@@ -1,0 +1,15 @@
+<div id="course-container"><h2>{{course?.title}}</h2>
+<p><strong>Description:</strong> {{course?.description}}</p>
+<p><strong>Duration:</strong>  {{course?.duration}}</p>
+<p><strong>Format:</strong> {{course?.format}}</p>
+<p><strong>Instructor:</strong>  {{course?.instructor}}</p>
+<p><strong>Price:</strong>  {{course?.price}}</p>
+<h3>Topics Covered:</h3>
+<li *ngFor="let topic of course?.topics">{{ topic }}</li>
+
+<div class="navigation-buttons" >
+  <button  [routerLink]="'/Courses/Course/'+(courseID-1)">Previous</button>
+  <button [routerLink]="'/Courses/Course/'+(courseID+1)">Next</button>
+</div>
+
+</div>

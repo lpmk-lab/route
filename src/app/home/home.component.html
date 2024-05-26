@@ -9,3 +9,7 @@
       <p>Welcome to the homepage of MyWebsite. Here you can find various resources and information about our services.</p>
   </section>
 </div>
+<div class="search-container">
+  <input type="text" placeholder="Search courses..." class="search-box" #searchcourse/>
+  <button class="search-button"  (click)="onSearchClick(searchcourse.value)">Search </button>
+</div>

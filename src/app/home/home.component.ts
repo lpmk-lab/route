@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  router:Router=inject(Router)
+  onSearchClick(searchValue:string){
+    this.router.navigate(['/Courses'],{queryParams:{'search':searchValue}})
+  }
 }

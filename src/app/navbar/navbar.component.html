@@ -1,7 +1,7 @@
 <div class="navbar">
-  <a href="#" class="logo">MyWebsite</a>
-  <a href="#" class="active">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-  <a href="#">Course</a>
+  <a routerLink="/Home"  class="logo">MyWebsite</a>
+  <a [routerLink]="'Home'" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">Home</a>
+  <a [routerLink]="['About']" [routerLinkActive]="'active'">About</a>
+  <a routerLink="Contacts"  routerLinkActive="active">Contact</a>
+  <a routerLink="Courses"  routerLinkActive="active">Course</a>
 </div>

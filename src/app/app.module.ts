@@ -10,24 +10,29 @@ import { ContactComponent } from './contact/contact.component';
 import { CourseComponent } from './course/course.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FOFComponent } from './404/404.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: '', redirectTo:"home",pathMatch:'full' },
+  { path: 'Home', component: HomeComponent },
+  { path: 'Contacts', component: ContactComponent },
   // { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'course', component: CourseComponent },
-  { path: '**', component: FOFComponent },  // Wildcard route for a 404 page
+  { path: 'About', component: AboutComponent },
+
+  { path: 'Courses', component: CourseComponent },
+  // { path: 'Courses/Course/:id/:name', component: CourseComponent },
+  { path: 'Courses/Course/:id', component: CourseDetailComponent },
+  { path: '**', component: FOFComponent } // Wildcard route for a 404 page
 ];
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    // HomeComponent,
+    HomeComponent,
     FooterComponent,
-    // AboutComponent,
-    // ContactComponent,
-    // CourseComponent,
+    AboutComponent,
+    ContactComponent,
+    CourseComponent,
+    CourseDetailComponent,
     // 404Component
   ],
   imports: [
