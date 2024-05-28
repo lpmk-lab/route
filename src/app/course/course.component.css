@@ -71,3 +71,43 @@
   color: #666666;
   font-size: 16px;
 }
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-btn {
+  background-color: #06BBCC;
+  color: #fff;
+}
+
+.view-btn:hover {
+  background-color: #028a99;
+}
+
+.view-btn:active {
+  transform: scale(0.98);
+}
+
+.checkout-btn {
+  background-color: #FF5722;
+  color: #fff;
+}
+
+.checkout-btn:hover {
+  background-color: #E64A19;
+}
+
+.checkout-btn:active {
+  transform: scale(0.98);
+}

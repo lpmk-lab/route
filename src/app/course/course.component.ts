@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Course, course1 } from '../course/course';
+import { CourseService } from '../Services/course.service';
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
@@ -12,6 +13,7 @@ export class CourseComponent  implements OnInit{
   }
 
   activeRoute:ActivatedRoute=inject(ActivatedRoute)
+  courseService:CourseService=inject(CourseService)
   courses:Course[]=[];
   searchstring:string|null=null
   gotoCourseDetail(id:number){
@@ -25,7 +27,10 @@ export class CourseComponent  implements OnInit{
      this.activeRoute.queryParams.subscribe((data)=>{
       this.searchstring=data['search']
       if(this.searchstring==undefined||this.searchstring==''||this.searchstring==null)
-        this.courses=course1;
+       this.courseService.getALLcourse().subscribe((data:any)=>{
+        this.courses=data
+      })
+
       else{
         this.courses=  course1.filter(x=>x.format.toLowerCase().includes(this.searchstring==null?'':this.searchstring));
       }

@@ -2,6 +2,8 @@
   <a routerLink="/Home"  class="logo">MyWebsite</a>
   <a [routerLink]="'Home'" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">Home</a>
   <a [routerLink]="['About']" [routerLinkActive]="'active'">About</a>
-  <a routerLink="Contacts"  routerLinkActive="active">Contact</a>
-  <a routerLink="Courses"  routerLinkActive="active">Course</a>
+  <a routerLink="/Contacts"  routerLinkActive="active">Contact</a>
+  <a routerLink="/Courses"  routerLinkActive="active">Course</a>
+  <a routerLink="/Login"  routerLinkActive="active" *ngIf="!authservice.isLogged">Login</a>
+  <a routerLink="/Login"  [queryParams]="{logout:true}" *ngIf="authservice.isLogged">Logout</a>
 </div>

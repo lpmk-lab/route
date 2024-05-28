@@ -1,0 +1,35 @@
+<div class="checkout-container">
+  <h2>Course Checkout</h2>
+  <div class="checkout-content">
+      <form class="checkout-form">
+          <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <input type="text" id="card-number" name="card-number" required>
+          </div>
+          <div class="form-group">
+              <label for="exp-month">Expire On</label>
+              <div class="expiration">
+                  <input type="text" id="exp-month" name="exp-month" placeholder="MM" required>
+                  <input type="text" id="exp-year" name="exp-year" placeholder="YYYY" required>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" required>
+          </div>
+          <button type="submit" class="checkout-button">Check Out</button>
+      </form>
+      <div class="order-summary">
+          <h3>Order Summary</h3>
+          <p><strong>Selected Course:</strong> {{coruse.title}}</p>
+          <p><strong>Discount:</strong> ${{coruse.price}}</p>
+          <p><strong>Subtotal:</strong> $${{coruse.price}}</p>
+          <p><strong>Tax:</strong> $10</p>
+          <p><strong>Final Total:</strong> $${{coruse.price+10}}</p>
+      </div>
+  </div>
+</div>

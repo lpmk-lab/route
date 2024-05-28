@@ -9,11 +9,15 @@
       <p>Discover our comprehensive courses designed to help you master new skills and advance your career.</p>
       <a routerLink="/Courses" [queryParams]="{search:'facetoface'}">show Face To Face Course</a>
       <div class="courses" >
-          <div class="course-card" *ngFor="let course of courses"(click)="gotoCourseDetail(course.id)">
+          <div class="course-card" *ngFor="let course of courses">
               <img src="https://via.placeholder.com/300x200" alt="Course 1">
               <h3>{{course.title}}</h3>
               <p>{{course.description}}</p>
               <p>{{course.format}}</p>
+              <div class="button-container">
+                <button class="btn view-btn" (click)="gotoCourseDetail(course.id)">View Detail</button>
+                <button class="btn checkout-btn" routerLink="/Courses/Checkout" [state]="course">Check Out</button>
+            </div>
           </div>
 
       </div>

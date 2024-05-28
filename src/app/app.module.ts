@@ -8,21 +8,14 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CourseComponent } from './course/course.component';
-import { RouterModule, Routes } from '@angular/router';
-import { FOFComponent } from './404/404.component';
-import { CourseDetailComponent } from './course-detail/course-detail.component';
-const routes: Routes = [
-  { path: '', redirectTo:"home",pathMatch:'full' },
-  { path: 'Home', component: HomeComponent },
-  { path: 'Contacts', component: ContactComponent },
-  // { path: '', component: HomeComponent },
-  { path: 'About', component: AboutComponent },
 
-  { path: 'Courses', component: CourseComponent },
-  // { path: 'Courses/Course/:id/:name', component: CourseComponent },
-  { path: 'Courses/Course/:id', component: CourseDetailComponent },
-  { path: '**', component: FOFComponent } // Wildcard route for a 404 page
-];
+import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { FormsModule } from '@angular/forms';
+import { LoaderComponent } from './loader/loader.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,11 +26,16 @@ const routes: Routes = [
     ContactComponent,
     CourseComponent,
     CourseDetailComponent,
+    LoginComponent,
+    CheckoutComponent,
+    LoaderComponent,
     // 404Component
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule,
+    FormsModule
+    // RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -53,4 +53,19 @@ export const course1: Course[] = [{
       "Building RESTful APIs",
       "Database Integration with MongoDB"
   ]
+},{
+  id:4,
+  title: "Full-Stack Development with React and aNGULAR",
+  description: "Learn to build full-stack web applications using React for the frontend and Node.js for the backend.",
+  duration: "12 weeks",
+  format: "FaceToFace",
+  instructor: "Alice Johnson",
+  price: 599,
+  topics: [
+      "React Fundamentals",
+      "State Management with Redux",
+      "Node.js and Express",
+      "Building RESTful APIs",
+      "Database Integration with MongoDB"
+  ]
 } ];
